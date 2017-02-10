@@ -48,7 +48,7 @@
 
 *        ownership, operation and maintenance of these facilities
 
-#      A typical example is an electricity generation project which the
+*      A typical example is an electricity generation project which the
 
 *        private sector builds, owns, operates for a certain period of time
 
@@ -85,7 +85,7 @@
 
 *        have any fall-back on the resources/assets of the sponsors if the
 
-#        SPV fails to meet debt servicing obligations.
+*        SPV fails to meet debt servicing obligations.
 
 *      The contracts are as ironclad as possible and are less left to
 
@@ -102,9 +102,9 @@
 
 *      Project lenders
 
-#      EPC (engineering, procurement, and construction) contractor
+*      EPC (engineering, procurement, and construction) contractor
 
-#      O & M (operations and maintenance) contractor
+*      O & M (operations and maintenance) contractor
 
 *      Government
 
@@ -214,7 +214,7 @@
 
 *        to do, a minimum payment
 
-#      A payment mechanism and and a security mechanism that ensures
+*      A payment mechanism and and a security mechanism that ensures
 
 *        availability of payments on time is established. In India, several
 
@@ -318,7 +318,7 @@
 
 *        historically been funded by banks and financial institutions, SBI,
 
-#        IDFC, ICICI, IDBI, and PFC being the key financiers.
+*        IDFC, ICICI, IDBI, and PFC being the key financiers.
 
 *      In recent times, there has been an increasing interest from the
 
@@ -330,7 +330,7 @@
 
 *        tenors of 12 to 20 years.
 
-#      A large part of the Golden Quadrilateral is based on a fixed
+*      A large part of the Golden Quadrilateral is based on a fixed
 
 *        annuity payment to contractors on a build-operate-transfer (BOT)
 
@@ -441,7 +441,7 @@
 
 *        National Rail Vikas Yojana, National Maritime Development Program
 
-#        (NMDP), airport expansion program, and so on. However, the
+*        (NMDP), airport expansion program, and so on. However, the
 
 *        estimated investment requirements are far greater than governmental
 
@@ -466,19 +466,19 @@
 
 *      To give impetus to PPPs several initiatives have been taken. The
 
-#        GOI has established a Cabinet Committee on Infrastructure (COI), a
+*        GOI has established a Cabinet Committee on Infrastructure (COI), a
 
 *        high-level Committee of Secretaries, a PPP Appraisal Committee
 
-#        (PPPAC) on the model of the Public Investment Board (PIB), and
+*        (PPPAC) on the model of the Public Investment Board (PIB), and
 
 *        several task forces to streamline decision making and
 
 *        operationalise PPPs. It has established the Viability Gap Funding
 
-#        (VGF) scheme and the India Infrastructure Finance Company Limited
+*        (VGF) scheme and the India Infrastructure Finance Company Limited
 
-#        (IIFCL) to provide long-term finance to PPP projects.
+*        (IIFCL) to provide long-term finance to PPP projects.
 
 *      The GOI is working on several initiatives to assist and encourage
 
@@ -499,7 +499,7 @@
 
 *      In order to accelerate PPPs the following are needed:
 
-#      A stronger policy and regulatory framework has to be created, both
+*      A stronger policy and regulatory framework has to be created, both
 
 *        at the centre and the states. The US-India CEO forum has called for
 

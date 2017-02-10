@@ -1,3 +1,20 @@
+#!/usr/bin/env python
+
+    # -*- coding: utf-8 -*-
+
+"""
+* MIT Licensed
+
+* File Name : automatingScript.py
+
+* Purpose : Creating Markdown presentations from powerpoint presentations
+
+* Creation Date : 09-02-2017
+
+* Copyright (c) 2017 Ranvir Singh <ranvir.singh1114@gmail.com>
+
+"""
+
 # Read the file:
 #
 #   whenever the line starts with *:
@@ -50,9 +67,18 @@ for line in inputFile:
             somestring1 = "# "
             newString = line
             newString = newString.replace('* ', '')
-            outputFile.write(somestring1 + newString + '\n')
-            tempSlide = 2
-            break
+
+            allwords = newString.split()
+            for y in allwords:
+                if(y.isupper() or y.isdigit()):
+                    newTemp = 1
+                else:
+                    newTemp = 0
+
+            if(newTemp == 1):
+                outputFile.write(somestring1 + newString + '\n')
+                tempSlide = 2
+                break
 
         elif(tempSlide == 0 and x != "*"):
             somestring1 = "### "
