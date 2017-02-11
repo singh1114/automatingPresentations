@@ -42,6 +42,8 @@ outputFile = open("result.md", "w")
 # temporary variable to check for the new slides
 tempSlide = 1
 
+oneMoreTemp = "default"
+
 # iterating over each line in the file
 for line in inputFile:
 
@@ -55,20 +57,27 @@ for line in inputFile:
         if(x == "References"):
             outputFile.write('\n---\n\n')
             tempSlide = 1
+            oneMoreTemp = "default"
 
         if(x == "*"):
             if(tempSlide == 1):
                 # Don't make a list
                 # Set height = 150%
                 tempSlide = 0
-                continue
+
+            else:
+                oneMoreTemp = "default"
+
+            continue
 
         if((x.isupper() and tempSlide == 0 and x != "*") or (x.isupper() and tempSlide == 2)):
-            somestring1 = "# "
+            somestring1 = "## "
             newString = line
             newString = newString.replace('* ', '')
 
             allwords = newString.split()
+
+            # Checking that all the words are capitals
             for y in allwords:
                 if(y.isupper() or y.isdigit()):
                     newTemp = 1
@@ -88,11 +97,13 @@ for line in inputFile:
             tempSlide = 2
             break
 
-        elif(tempSlide == 2 and x != "*"):
-            somestring1 = "* "
+        elif((tempSlide == 2 and x != "*") or oneMoreTemp == "continue"):
+            if(oneMoreTemp == "continue"):
+                somestring1 = ""
+            else:
+                somestring1 = "* "
             newString = line
             newString = newString.replace('* ', '')
-            outputFile.write(somestring1 + newString + '\n')
+            outputFile.write(somestring1 + newString)
+            oneMoreTemp = "continue"
             break
-
-        #elif(tempSlide == 2):
