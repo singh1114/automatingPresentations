@@ -36,11 +36,27 @@
 # open the given file in read mode
 inputFile = open("FinInfSt.txt", "r")
 
-# open another file where the changes are going to be made
+# open another file where the changes are going to be made in write mode
 outputFile = open("result.md", "w")
 
 # temporary variable to check for the new slides
-tempSlide = 1
+# About temporary variable tempSlide
+# when tempSlide == "default",
+#     -it means either
+#               it is the first case
+#               or 
+#               the file pointer have encountered the word "References"
+#
+# when tempSlide == "headers",
+#     -it means either
+#               the file pointer have encountered a capital letter word
+#               or
+#               the file pointer have encountered the first element in the slide
+#
+# when tempSlide = "list",
+#     -it means that
+#               the list is going on.
+tempSlide = "default"
 
 oneMoreTemp = "default"
 
@@ -56,21 +72,21 @@ for line in inputFile:
     for x in words:
         if(x == "References"):
             outputFile.write('\n---\n\n')
-            tempSlide = 1
+            tempSlide = "default"
             oneMoreTemp = "default"
 
         if(x == "*"):
-            if(tempSlide == 1):
+            if(tempSlide == "default"):
                 # Don't make a list
                 # Set height = 150%
-                tempSlide = 0
+                tempSlide = "headers"
 
             else:
                 oneMoreTemp = "default"
 
             continue
 
-        if((x.isupper() and tempSlide == 0 and x != "*") or (x.isupper() and tempSlide == 2)):
+        if((x.isupper() and tempSlide == "headers" and x != "*") or (x.isupper() and tempSlide == "list")):
             somestring1 = "## "
             newString = line
             newString = newString.replace('* ', '')
@@ -86,18 +102,18 @@ for line in inputFile:
 
             if(newTemp == 1):
                 outputFile.write(somestring1 + newString + '\n')
-                tempSlide = 2
+                tempSlide = "list"
                 break
 
-        elif(tempSlide == 0 and x != "*"):
+        elif(tempSlide == "headers" and x != "*"):
             somestring1 = "### "
             newString = line
             newString = newString.replace('* ', '')
             outputFile.write(somestring1 + newString + '\n')
-            tempSlide = 2
+            tempSlide = "list"
             break
 
-        elif((tempSlide == 2 and x != "*") or oneMoreTemp == "continue"):
+        elif((tempSlide == "list" and x != "*") or oneMoreTemp == "continue"):
             if(oneMoreTemp == "continue"):
                 somestring1 = ""
             else:
